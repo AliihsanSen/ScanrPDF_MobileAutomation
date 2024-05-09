@@ -35,6 +35,10 @@ public class BaseTestIos extends ExtentTestReports {
 
             // Uygulama yolunuza göre düzenleyin. iOS için genellikle .app uzantılı bir dosya beklenir.
             cap.setCapability("app", "/Users/tribe/Desktop/Projects/ScanrTestNG/src/test/resources/scanner.app");
+            /**
+             *             => App uzantılı dosyayı çalıştırabilmeniz için geliştiriciden davet almanız
+             *             ve uygulamanın kaynak kodlarına ihtiyacınız bulunmaktadır.
+              */
 
             appiumDriver = new IOSDriver<WebElement>(new URL("http://127.0.0.1:4723"), cap);
             wait = new WebDriverWait(appiumDriver, 30);

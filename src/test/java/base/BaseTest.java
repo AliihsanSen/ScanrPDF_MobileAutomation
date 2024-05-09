@@ -34,6 +34,7 @@ public class BaseTest extends ExtentTestReports {
             cap.setCapability("appium:skipUnlock", "true"); // Satıcı önekini ekledik
             cap.setCapability("noReset", "true");
             cap.setCapability("app", "/Users/tribe/Desktop/Projects/ScanrTestNG/src/test/resources/Scanr.apk");
+            // => APK dosyası çok fazla boyut kapladığı için github reposuna çekilmemiştir.
 
             appiumDriver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723"), cap);
             wait = new WebDriverWait(appiumDriver, 30);
