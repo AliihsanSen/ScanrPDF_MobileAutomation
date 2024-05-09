@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="AllTestsSuite">
+
+    <test name="AndroidAllTests">
+        <classes>
+            <class name="test.Android.TermOfUseTest1"/>
+            <class name="test.Android.OnboardTest2"/>
+            <class name="test.Android.AddComponentiTest3"/>
+            <class name="test.Android.HomeMyDriveTest4"/>
+            <class name="test.Android.HomeFoldersTest5"/>
+            <class name="test.Android.HomeAllFilesTest6"/>
+            <class name="test.Android.GetCloudTest7"/>
+            <class name="test.Android.SearchBarTest8"/>
+            <class name="test.Android.SettingsTest9"/>
+            <class name="test.Android.UpgradeToUnlimitedScanTest10"/>
+            <class name="test.Android.ShareTest11"/>
+            <class name="test.Android.SupportTest12"/>
+            <class name="test.Android.PrivacyPolicyTest13"/>
+            <class name="test.Android.TermOfUseSettingsTest14"/>
+            <class name="test.Android.RestorePurchaseTest15"/>
+            <class name="test.Android.SubscriptionTest16"/>
+        </classes>
+    </test>
+
+</suite>

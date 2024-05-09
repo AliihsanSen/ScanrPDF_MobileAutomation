@@ -1,0 +1,2708 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Sep 22, 2023 03:46:44 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>16</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Terms Of Use Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:46:50 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:46:50 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:47:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+846ms</span>
+</div>
+<div class='test-desc'>Terms Of Use Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:46:53 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı onboard ekranının altında 'Terms Of  Use' text'i olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:46:56 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı onboard ekranının altında 'Terms Of  Use' text'inin tıklanabilir olduğunu görüntüledi.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:46:59 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı onboard ekranının altında 'Terms Of  Use' text'ine tıklayarak sözleşme ekranı açıldı.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:04 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı 'Terms Of Use' sözleşmelerinin bulunduğu ekranı kapattı.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:05 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Onboard Ekranı Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:47:08 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:47:08 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:47:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+393ms</span>
+</div>
+<div class='test-desc'>Onboard Ekranı Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:11 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı onboard ekranında 'Scan with Ease' ıconu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:12 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı onboard ekranında bulunan ıconun altında 'Scan with Ease' text'i olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:13 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı onboard ekranında bulunan ıconun altında 'Scan with Ease' text'inin altında açıklama text'i olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:14 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı diğer onboard ekranını görüntülemek için butona tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:15 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı onboard ekranında 'Edit on the Go' ıconu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:16 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı onboard ekranında bulunan ıconun altında 'Edit on the Go' text'i olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:17 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı onboard ekranında bulunan ıconun altında 'Edit on the Go' text'inin altında açıklama text'i olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:19 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı diğer onboard ekranını görüntülemek için butona tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:20 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı onboard ekranında 'Export and Share Instantly' ıconu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:21 PM</td>
+				<td class='step-details'>
+						10-) Kullanıcı onboard ekranında bulunan ıconun altında 'Export and Share Instantly' text'i olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:22 PM</td>
+				<td class='step-details'>
+						11-) Kullanıcı onboard ekranında bulunan ıconun altında 'Export and Share Instantly' text'inin altında açıklama text'i olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:23 PM</td>
+				<td class='step-details'>
+						12-) Kullanıcı diğer onboard ekranını görüntülemek için butona tıklar ve home ekranına gider.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:24 PM</td>
+				<td class='step-details'>
+						13-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Add Componenti Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:47:27 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:47:27 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:47:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+854ms</span>
+</div>
+<div class='test-desc'>Add Componenti </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:30 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranındaki add componenti ıconu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:31 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranındaki add componenti tıklanabilir olduğunu görüntüler ve tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:33 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı home ekranındaki add componenti tıklar ve 'Scan From Camera' text'inin olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:35 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı home ekranındaki add componenti tıklar ve 'İmport From Galery' text'inin olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:37 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı home ekranındaki add componenti tıklar ve 'Create Folder' text'inin olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:39 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı 'Add Componentinin' bulunduğu ekranı kapattı.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:40 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Home Ekranı My Drive Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:47:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:47:44 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:48:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+843ms</span>
+</div>
+<div class='test-desc'>Home Ekranı My Drive Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:47 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranında 'Search Bar' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:48 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranında 'Settings' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:49 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı home ekranında 'My Drive' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:50 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı home ekranında 'Folders' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:51 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı home ekranında 'All Files' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:52 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı home ekranında My Drive sayfasında 'Get Cloud' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:53 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı home ekranında My Drive sayfasında 'Files are not synced' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:54 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı home ekranında My Drive sayfasında 'Storage' alanını görüntüleyebileceğini doğrular.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:55 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı home ekranında My Drive sayfasında 'Modified Date' texti olduğunu, tıklayabileceğini ve eklemiş olduğu dosyaları sıralayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:57 PM</td>
+				<td class='step-details'>
+						10-) Kullanıcı home ekranında My Drive sayfasında 'Modified Date' ıconu olduğunu ve 'Modified Date' textine tıkladığı zaman ıconun aşağı yukarı döndüğünü görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:58 PM</td>
+				<td class='step-details'>
+						11-) Kullanıcı home ekranında My Drive sayfasında 'My Drive' ıconu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:47:59 PM</td>
+				<td class='step-details'>
+						12-) Kullanıcı home ekranında My Drive sayfasında 'You do not have a file yet. Create now!' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:00 PM</td>
+				<td class='step-details'>
+						13-) Kullanıcı home ekranında My Drive sayfasında add componenti ıconu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:01 PM</td>
+				<td class='step-details'>
+						14-) Kullanıcı home ekranında My Drive sayfasındaki add componenti tıklanabilir olduğunu görüntüler ve tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:03 PM</td>
+				<td class='step-details'>
+						15-) Kullanıcı home ekranında My Drive sayfasında add componenti tıklar ve 'Scan From Camera' text'inin olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:05 PM</td>
+				<td class='step-details'>
+						16-) Kullanıcı home ekranındaki add componenti tıklar ve 'İmport From Galery' text'inin olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:07 PM</td>
+				<td class='step-details'>
+						17-) Kullanıcı home ekranındaki add componenti tıklar ve 'Create Folder' text'inin olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:08 PM</td>
+				<td class='step-details'>
+						18-) Kullanıcı 'Add Componentinin' bulunduğu ekranı kapattı.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:09 PM</td>
+				<td class='step-details'>
+						19-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Home Ekranı Folders Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:48:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:48:12 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:48:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+791ms</span>
+</div>
+<div class='test-desc'>Home Ekranı Folders Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:16 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranında 'Search Bar' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:17 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranında 'Settings' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:18 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı home ekranında 'My Drive' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:19 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı home ekranında 'Folders' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:20 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı home ekranında 'Folders' textine tıklar ve Folders sayfasında olduğunu doğrular.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:21 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı home ekranında Folders sayfasında 'All Files' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:22 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı home ekranında Folders sayfasında 'Get Cloud' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:23 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı home ekranında Folders sayfasında 'Files are not synced' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:24 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı home ekranında Folders sayfasında 'Storage' alanını görüntüleyebileceğini doğrular.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:25 PM</td>
+				<td class='step-details'>
+						10-) Kullanıcı home ekranında Folders sayfasında 'Modified Date' texti olduğunu, tıklayabileceğini ve eklemiş olduğu dosyaları sıralayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:27 PM</td>
+				<td class='step-details'>
+						11-) Kullanıcı home ekranında Folders sayfasında 'Modified Date' ıconu olduğunu ve 'Modified Date' textine tıkladığı zaman ıconun aşağı yukarı döndüğünü görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:28 PM</td>
+				<td class='step-details'>
+						12-) Kullanıcı home ekranında Folders sayfasında 'Folders' ıconu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:29 PM</td>
+				<td class='step-details'>
+						13-) Kullanıcı home ekranında Folders sayfasında 'You do not have a folder yet. Create now!' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:30 PM</td>
+				<td class='step-details'>
+						14-) Kullanıcı home ekranında Folders sayfasında add componenti ıconu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:31 PM</td>
+				<td class='step-details'>
+						15-) Kullanıcı home ekranında Folders sayfasındaki add componenti tıklanabilir olduğunu görüntüler ve tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:33 PM</td>
+				<td class='step-details'>
+						16-) Kullanıcı home ekranında Folders sayfasında add componenti tıklar ve 'Create Folder' text'inin olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:34 PM</td>
+				<td class='step-details'>
+						17-) Kullanıcı 'Add Componentinin' bulunduğu ekranı kapattı.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:35 PM</td>
+				<td class='step-details'>
+						18-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Home Ekranı All Files Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:48:38 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:48:38 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:49:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+216ms</span>
+</div>
+<div class='test-desc'>Home Ekranı All Files Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:41 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranında 'Search Bar' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:42 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranında 'Settings' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:44 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı home ekranında 'My Drive' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:45 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı home ekranında 'Folders' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:46 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı home ekranında Folders sayfasında 'All Files' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:47 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı home ekranında 'All Files' textine tıklar ve All Files sayfasında olduğunu doğrular.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:48 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı home ekranında All Files sayfasında 'Get Cloud' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:49 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı home ekranında All Files sayfasında 'Files are not synced' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:50 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı home ekranında All Files sayfasında 'Storage' alanını görüntüleyebileceğini doğrular.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:52 PM</td>
+				<td class='step-details'>
+						10-) Kullanıcı home ekranında All Files sayfasında 'Modified Date' texti olduğunu, tıklayabileceğini ve eklemiş olduğu dosyaları sıralayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:53 PM</td>
+				<td class='step-details'>
+						11-) Kullanıcı home ekranında All Files sayfasında 'Modified Date' ıconu olduğunu ve 'Modified Date' textine tıkladığı zaman ıconun aşağı yukarı döndüğünü görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:54 PM</td>
+				<td class='step-details'>
+						12-) Kullanıcı home ekranında All Files sayfasında 'All Files' ıconu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:55 PM</td>
+				<td class='step-details'>
+						13-) Kullanıcı home ekranında All Files sayfasında 'You do not have a file yet. Create now!' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:56 PM</td>
+				<td class='step-details'>
+						14-) Kullanıcı home ekranında All Files sayfasında add componenti ıconu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:57 PM</td>
+				<td class='step-details'>
+						15-) Kullanıcı home ekranında All Files sayfasındaki add componenti tıklanabilir olduğunu görüntüler ve tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:48:59 PM</td>
+				<td class='step-details'>
+						16-) Kullanıcı home ekranında All Files sayfasında add componenti tıklar ve 'Scan From Camera' text'inin olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:01 PM</td>
+				<td class='step-details'>
+						17-) Kullanıcı home ekranında All Files sayfasında add componenti tıklar ve 'İmport From Galery' text'inin olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:02 PM</td>
+				<td class='step-details'>
+						18-) Kullanıcı 'Add Componentinin' bulunduğu ekranı kapattı.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:03 PM</td>
+				<td class='step-details'>
+						19-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Home Ekranı Get Cloud Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:49:06 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:49:06 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:49:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+486ms</span>
+</div>
+<div class='test-desc'>Home Ekranı Get Cloud Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:10 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranında 'Get Cloud' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:11 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranında 'Get Cloud' texti'ne tıklar ve subscription ekranının açıldığını görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:12 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı subscription ekranının sol üst tarafında '(x)' ıconu olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:13 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı subscription ekranının sağ üst tarafında 'restore' text'i olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:14 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı subscription ekranında 'Unlimited' text'i olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:15 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı subscription ekranında 'Pro Scan' text'i olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:17 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı subscription ekranında 'subcription' ıconu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:18 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı subscription ekranında subcription text'leri olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:18 PM</td>
+				<td class='step-details'>
+						* Basic document allowance
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:18 PM</td>
+				<td class='step-details'>
+						* Ad-free experience
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:18 PM</td>
+				<td class='step-details'>
+						* Includes watermark
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:18 PM</td>
+				<td class='step-details'>
+						* Standart resolution
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:18 PM</td>
+				<td class='step-details'>
+						* 1GB storage space
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:18 PM</td>
+				<td class='step-details'>
+						* Folder creation
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:19 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı subscription ekranında subcription fiyatlandırmaların olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:19 PM</td>
+				<td class='step-details'>
+						* Weekly
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:19 PM</td>
+				<td class='step-details'>
+						* Monthly
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:19 PM</td>
+				<td class='step-details'>
+						* Quarterly
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:19 PM</td>
+				<td class='step-details'>
+						* Annualy
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:20 PM</td>
+				<td class='step-details'>
+						10-) Kullanıcı subscription ekranının altında 'Continue' butonu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:21 PM</td>
+				<td class='step-details'>
+						11-) Kullanıcı subscription ekranının altında 'Scale' butonu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:23 PM</td>
+				<td class='step-details'>
+						12-) Kullanıcı subscription ekranının altında 'Scale' butonuna tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:24 PM</td>
+				<td class='step-details'>
+						13-) Kullanıcı subscription ekranında scale butonuna tıkladığı zaman 'Continuing you are confirming that you have reciewed and agree to our Terms of Service and Privacy Policy' olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:25 PM</td>
+				<td class='step-details'>
+						14-) Kullanıcı subscription ekranının sol üst tarafında '(x)' ıconuna tıklar ve bir önceki ekrana dönebileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:26 PM</td>
+				<td class='step-details'>
+						15-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Home Ekranı Search Bar Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:49:29 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:49:29 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:49:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+893ms</span>
+</div>
+<div class='test-desc'>Home Ekranı Search Bar Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:32 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranında 'Settings' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:33 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranında 'My Drive' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:34 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı home ekranında 'Search Bar' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:36 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı home ekranında 'Search Bar' butonuna tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:37 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı search bar ekranında 'Search Bar' ıconu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:38 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı search bar ekranında 'You do not have a file yet. Create now!' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:39 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı search bar ekranında 'Back' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:41 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı search bar ekranında 'Back' butonuna tıklar ve home ekranına döndüğünü görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:42 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Settings Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:49:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:49:45 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:50:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+512ms</span>
+</div>
+<div class='test-desc'>Settings Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:48 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranında 'My Drive' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:49 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranında 'Search Bar' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:50 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı home ekranında 'Settings' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:53 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı home ekranında 'Settings' butonuna tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:56 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı settings ekranında 'Settings' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:57 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı Settings ekranında 'Back' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:58 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı Settings ekranında 'Version' bilgisinin olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:58 PM</td>
+				<td class='step-details'>
+						* Version : 1.1.0 *
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:49:59 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı Settings ekranında 'Back' butonuna tıklar ve home ekranına döndüğünü görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:00 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Upgrade To Unlimited Scan Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:50:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:50:03 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:50:23 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+292ms</span>
+</div>
+<div class='test-desc'>Upgrade To Unlimited Scan Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:06 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranında 'My Drive' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:07 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranında 'Search Bar' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:08 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı home ekranında 'Settings' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:12 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı home ekranında 'Settings' butonuna tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:14 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı settings ekranında 'Settings' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:15 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı settings ekranında 'Upgrade To Unlimited Scan' text'i olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:16 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı settings ekranında 'Upgrade To Unlimited Scan' text'ine tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:18 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı subscription ekranının sol üst tarafında '(x)' ıconu olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:19 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı subscription ekranında 'Unlimited' text'i olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:20 PM</td>
+				<td class='step-details'>
+						10-) Kullanıcı subscription ekranında 'Pro Scan' text'i olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:21 PM</td>
+				<td class='step-details'>
+						11-) Kullanıcı subscription ekranının sol üst tarafında '(x)' ıconuna tıklar ve bir önceki ekrana dönebileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:22 PM</td>
+				<td class='step-details'>
+						12-) Kullanıcı Settings ekranında 'Back' butonuna tıklar ve home ekranına döndüğünü görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:23 PM</td>
+				<td class='step-details'>
+						13-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Share  Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:50:26 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:50:26 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:50:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+234ms</span>
+</div>
+<div class='test-desc'>Share  Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:29 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranında 'My Drive' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:30 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranında 'Search Bar' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:32 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı home ekranında 'Settings' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:35 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı home ekranında 'Settings' butonuna tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:37 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı settings ekranında 'Settings' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:38 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı settings ekranında 'Share' text'i olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:40 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı settings ekranında 'Share' text'ine tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:42 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı settings ekranında Share butonuna tıkladıktan sonra aşağıdan yukarıyanative 'Share' bottomSheet'i açıldığını görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:45 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı settings ekranında Share butonuna tıkladıktan sonra açılan ekranda'Try Scanr Now! Turn your device into a powerful scanner.' text'i olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:47 PM</td>
+				<td class='step-details'>
+						10-) Kullanıcı settings ekranında Share butonuna tıkladıktan sonra açılan ekrandaapp'in linklerini hangi platfromlardan paylaşabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:47 PM</td>
+				<td class='step-details'>
+						* Bluetooth
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:47 PM</td>
+				<td class='step-details'>
+						* Chrome
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:47 PM</td>
+				<td class='step-details'>
+						* Drive
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:47 PM</td>
+				<td class='step-details'>
+						* Gmail
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:49 PM</td>
+				<td class='step-details'>
+						11-) Kullanıcı native açılan 'Share' ekranını kapattı.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:50 PM</td>
+				<td class='step-details'>
+						12-) Kullanıcı Settings ekranında 'Back' butonuna tıklar ve home ekranına döndüğünü görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:51 PM</td>
+				<td class='step-details'>
+						13-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Restore Purchase Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:50:54 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:50:54 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:51:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 54s+368ms</span>
+</div>
+<div class='test-desc'>Restore Purchase Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:58 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranında 'My Drive' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:50:59 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranında 'Search Bar' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:00 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı home ekranında 'Settings' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:03 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı home ekranında 'Settings' butonuna tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:05 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı settings ekranında 'Settings' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:07 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı settings ekranında 'Support' text'i olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:08 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı settings ekranında 'Support' text'ine tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:10 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı settings ekranında Support butonuna tıkladıktan sonra sağdan sola'Support' ekranı açıldığını görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:13 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı settings ekranında Support butonuna tıkladıktan sonra açılan ekranda'What can we help you with?' text'i olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:14 PM</td>
+				<td class='step-details'>
+						10-) Kullanıcı settings ekranında Support butonuna tıkladıktan sonra açılan ekrandasearch bar olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:16 PM</td>
+				<td class='step-details'>
+						11-) Kullanıcı settings ekranında Support butonuna tıkladıktan sonra açılan ekranda'Frequently asked' text'i olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:19 PM</td>
+				<td class='step-details'>
+						12-) Kullanıcı settings ekranında Support butonuna tıkladıktan sonra açılan ekrandaapp'i nasıl kullanacağına dair support text'leri olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:19 PM</td>
+				<td class='step-details'>
+						* How to Scan?
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:19 PM</td>
+				<td class='step-details'>
+						* How to Restore Purchases?
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:19 PM</td>
+				<td class='step-details'>
+						* How to Delete Files?
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:37 PM</td>
+				<td class='step-details'>
+						13-) Kullanıcı settings ekranında Support butonuna tıkladıktan sonra açılan ekrandaapp'i nasıl kullanacağını anlamadığı zaman contact ile bağlantı kurababileceğini ve contact butonu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:38 PM</td>
+				<td class='step-details'>
+						14-) Kullanıcı settings ekranında Support butonuna tıkladıktan sonra açılan ekrandaapp'i nasıl kullanacağını anlamadığı zaman contact butonuna tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:41 PM</td>
+				<td class='step-details'>
+						15-) Kullanıcı Support ekranında contact butonuna tıkladıktan sonra sağdan sola'Contact' ekranı açıldığını görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:42 PM</td>
+				<td class='step-details'>
+						16-) Kullanıcı Support ekranında contact butonuna tıkladıktan sonra sağdan sola'Contact' ekranı açıldığını ve açılan ekranda 'Send' butonu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:43 PM</td>
+				<td class='step-details'>
+						17-) Kullanıcı Contact ekranında sol üst köşede back ıconu olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:44 PM</td>
+				<td class='step-details'>
+						18-) Kullanıcı Contact ekranında sol üst köşede bulunan back ıconuna tıklar ve support ekranına döner.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:45 PM</td>
+				<td class='step-details'>
+						19-) Kullanıcı Support ekranında sol üst köşede back ıconu olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:46 PM</td>
+				<td class='step-details'>
+						20-) Kullanıcı Support ekranında sol üst köşede bulunan back ıconuna tıklar ve support ekranına döner.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:48 PM</td>
+				<td class='step-details'>
+						21-) Kullanıcı Settings ekranında 'Back' butonuna tıklar ve home ekranına döndüğünü görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:49 PM</td>
+				<td class='step-details'>
+						22-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Privacy Policy Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:51:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:51:52 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:52:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+853ms</span>
+</div>
+<div class='test-desc'>Privacy Policy Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:55 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranında 'My Drive' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:56 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranında 'Search Bar' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:51:57 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı home ekranında 'Settings' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:00 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı home ekranında 'Settings' butonuna tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:03 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı settings ekranında 'Settings' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:04 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı settings ekranında 'Privacy policy' text'i olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:05 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı settings ekranında 'Privacy policy' text'ine tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:09 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı 'Privacy policy' sözleşmesinin bulunduğu ekranı kapattı.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:10 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı Settings ekranında 'Back' butonuna tıklar ve home ekranına döndüğünü görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:11 PM</td>
+				<td class='step-details'>
+						10-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Term Of Use Settings Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:52:14 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:52:14 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:52:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+907ms</span>
+</div>
+<div class='test-desc'>Term Of Use Settings Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:18 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranında 'My Drive' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:19 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranında 'Search Bar' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:20 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı home ekranında 'Settings' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:23 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı home ekranında 'Settings' butonuna tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:26 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı settings ekranında 'Settings' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:27 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı settings ekranında 'Term Of Use' text'i olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:28 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı settings ekranında 'Term Of Use' text'ine tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:32 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı 'Term Of Use' sözleşmesinin bulunduğu ekranı kapattı.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:33 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı Settings ekranında 'Back' butonuna tıklar ve home ekranına döndüğünü görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:34 PM</td>
+				<td class='step-details'>
+						10-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Restore Purchase Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:52:37 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:52:37 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:52:58 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+660ms</span>
+</div>
+<div class='test-desc'>Restore Purchase Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:40 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranında 'My Drive' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:42 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranında 'Search Bar' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:43 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı home ekranında 'Settings' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:46 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı home ekranında 'Settings' butonuna tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:48 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı settings ekranında 'Settings' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:50 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı settings ekranında 'Restore Purchase' text'i olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:51 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı settings ekranında 'Restore Purchase' text'ine tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:52 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı settings ekranında 'Restore Purchase' text'ine tıkladıktan sonra lottie şeklinde bir modal açıldığını görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:56 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı settings ekranında 'Restore Purchase' text'ine tıkladıktan sonra yukarıdan bir toast mesajı görünerek kullanıcının paketi uptade edildiğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:57 PM</td>
+				<td class='step-details'>
+						12-) Kullanıcı Settings ekranında 'Back' butonuna tıklar ve home ekranına döndüğünü görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:52:58 PM</td>
+				<td class='step-details'>
+						10-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>Scanr Subscription Testi</span>
+						<span class='test-time'>Sep 22, 2023 03:53:01 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 22, 2023 03:53:01 PM</span>
+	<span class='label end-time'>Sep 22, 2023 03:53:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 32s+150ms</span>
+</div>
+<div class='test-desc'>Subscription Testi </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:04 PM</td>
+				<td class='step-details'>
+						1-) Kullanıcı home ekranında 'My Drive' texti olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:05 PM</td>
+				<td class='step-details'>
+						2-) Kullanıcı home ekranında 'Search Bar' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:06 PM</td>
+				<td class='step-details'>
+						3-) Kullanıcı home ekranında 'Settings' butonu olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:10 PM</td>
+				<td class='step-details'>
+						4-) Kullanıcı home ekranında 'Settings' butonuna tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:12 PM</td>
+				<td class='step-details'>
+						5-) Kullanıcı settings ekranında 'Settings' texti olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:13 PM</td>
+				<td class='step-details'>
+						6-) Kullanıcı settings ekranında 'Upgrade To Unlimited Scan' text'i olduğunu ve butona tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:14 PM</td>
+				<td class='step-details'>
+						7-) Kullanıcı settings ekranında 'Upgrade To Unlimited Scan' text'ine tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:16 PM</td>
+				<td class='step-details'>
+						8-) Kullanıcı subscription ekranının sol üst tarafında '(x)' ıconu olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:17 PM</td>
+				<td class='step-details'>
+						9-) Kullanıcı subscription ekranında 'Unlimited' text'i olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:18 PM</td>
+				<td class='step-details'>
+						10-) Kullanıcı subscription ekranında 'Pro Scan' text'i olduğunu ve tıklayabileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:19 PM</td>
+				<td class='step-details'>
+						11-) Kullanıcı subscription ekranında 'subcription' ıconu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:20 PM</td>
+				<td class='step-details'>
+						12-) Kullanıcı subscription ekranında 'PRO SCAN' text'leri olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:20 PM</td>
+				<td class='step-details'>
+						* Basic document allowance
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:20 PM</td>
+				<td class='step-details'>
+						* Ad-free experience
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:20 PM</td>
+				<td class='step-details'>
+						* Includes watermark
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:20 PM</td>
+				<td class='step-details'>
+						* Standart resolution
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:20 PM</td>
+				<td class='step-details'>
+						* 1GB storage space
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:20 PM</td>
+				<td class='step-details'>
+						* Folder creation
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:21 PM</td>
+				<td class='step-details'>
+						13-) Kullanıcı subscription ekranında 'PRO SCAN' fiyatlandırmalarının olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:22 PM</td>
+				<td class='step-details'>
+						* Weekly
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:22 PM</td>
+				<td class='step-details'>
+						* Monthly
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:22 PM</td>
+				<td class='step-details'>
+						* Quarterly
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:22 PM</td>
+				<td class='step-details'>
+						* Annualy
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:23 PM</td>
+				<td class='step-details'>
+						14-) Kullanıcı subscription ekranında 'Unlimited' text'ine tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:24 PM</td>
+				<td class='step-details'>
+						15-) Kullanıcı subscription ekranında 'UNLIMITED' text'leri olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:24 PM</td>
+				<td class='step-details'>
+						* Unlimited document scanning
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:24 PM</td>
+				<td class='step-details'>
+						* Ad-free experience
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:24 PM</td>
+				<td class='step-details'>
+						* Watermark-free scans
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:24 PM</td>
+				<td class='step-details'>
+						* High-definition resolution
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:24 PM</td>
+				<td class='step-details'>
+						* 1GB storage space
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:24 PM</td>
+				<td class='step-details'>
+						* Create unlimited folders
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:25 PM</td>
+				<td class='step-details'>
+						16-) Kullanıcı subscription ekranında 'UNLIMITED' fiyatlandırmalarının olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:25 PM</td>
+				<td class='step-details'>
+						* Weekly
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:25 PM</td>
+				<td class='step-details'>
+						* Monthly
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:25 PM</td>
+				<td class='step-details'>
+						* Quarterly
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:25 PM</td>
+				<td class='step-details'>
+						* Annualy
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:26 PM</td>
+				<td class='step-details'>
+						17-) Kullanıcı subscription ekranında 'Pro Scan' text'ine tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:28 PM</td>
+				<td class='step-details'>
+						18-) Kullanıcı subscription ekranının altında 'Continue' butonu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:29 PM</td>
+				<td class='step-details'>
+						19-) Kullanıcı subscription ekranının altında 'Scale' butonu olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:30 PM</td>
+				<td class='step-details'>
+						20-) Kullanıcı subscription ekranının altında 'Scale' butonuna tıklar.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:31 PM</td>
+				<td class='step-details'>
+						21-) Kullanıcı subscription ekranında scale butonuna tıkladığı zaman 'Continuing you are confirming that you have reciewed and agree to our Terms of Service and Privacy Policy' olduğunu görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:32 PM</td>
+				<td class='step-details'>
+						22-) Kullanıcı subscription ekranının sol üst tarafında '(x)' ıconuna tıklar ve bir önceki ekrana dönebileceğini görüntüler.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:53:33 PM</td>
+				<td class='step-details'>
+						23-) Kullanıcı yapmış olduğu bütün test adımlarının başarılı bir şekilde gerçekleştiğini görüntüler.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>16</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Sep 22, 2023 03:46:44 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Sep 22, 2023 03:53:34 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 6m 49s+671ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 16,
+				passParent: 16,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "Scanr Terms Of Use Testi":14.846,"Scanr Onboard Ekranı Testi":16.393,"Scanr Add Componenti Testi":12.854,"Scanr Home Ekranı My Drive Testi":25.843,"Scanr Home Ekranı Folders Testi":22.791,"Scanr Home Ekranı All Files Testi":25.216,"Scanr Home Ekranı Get Cloud Testi":19.486,"Scanr Home Ekranı Search Bar Testi":12.893,"Scanr Settings Testi":15.512,"Scanr Upgrade To Unlimited Scan Testi":20.292,"Scanr Share  Testi":25.234,"Scanr Restore Purchase Testi":54.368,"Scanr Privacy Policy Testi":19.853,"Scanr Term Of Use Settings Testi":19.907,"Scanr Restore Purchase Testi":20.66,"Scanr Subscription Testi":32.15
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>

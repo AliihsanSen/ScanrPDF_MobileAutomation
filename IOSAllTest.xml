@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="AllTestsSuite">
+
+    <test name="IOSAllTests">
+        <classes>
+            <class name="test.IOS.TermOfUseTest1"/>
+            <class name="test.IOS.OnboardTest2"/>
+            <class name="test.IOS.NotificationTest3"/>
+            <class name="test.IOS.AddComponentiTest4"/>
+            <class name="test.IOS.HomeMyDriveTest5"/>
+            <class name="test.IOS.HomeFoldersTest6"/>
+            <class name="test.IOS.HomeAllFilesTest7"/>
+            <class name="test.IOS.GetCloudTest8"/>
+            <class name="test.IOS.SearchBarTest9"/>
+            <class name="test.IOS.SettingsTest10"/>
+            <class name="test.IOS.UpgradeToUnlimitedScanTest11"/>
+            <class name="test.IOS.ShareTest12"/>
+            <class name="test.IOS.SupportTest13"/>
+            <class name="test.IOS.PrivacyPolicyTest14"/>
+            <class name="test.IOS.TermOfUseSettingsTest15"/>
+            <class name="test.IOS.RestorePurchaseTest16"/>
+            <class name="test.IOS.SubscriptionTest17"/>
+        </classes>
+    </test>
+</suite>

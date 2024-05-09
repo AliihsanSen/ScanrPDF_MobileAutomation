@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ParalellTestsSuite">
+
+    <!-- Android ve iOS testlerini aynı anda çalıştırır -->
+
+    <suite-files>
+        <suite-file path="AndroidAlltest.xml" />
+        <suite-file path="IOSAllTest.xml" />
+    </suite-files>
+
+</suite>
